@@ -4,18 +4,37 @@
     box-sizing: border-box;   
    }
 
-.loc{
-    position: fixed;
-    top: 620px;
-    left: 280px;
+
+
+   .container {
+    position: relative; /* Define como referência para elementos filhos */
+    width: 100%;        /* O vídeo ocupará a largura total da tela */
+    max-height: 100vh;  /* Limita a altura ao tamanho da tela */
+    overflow: hidden;
 }
 
-.container{
-    width: 65vh;
+video {
+    width: 100%;        /* Escala o vídeo proporcionalmente */
+    height: auto;
 }
 
-.loc2{
-    /* background-color: aqua; */
+.loc {
+    position: absolute; /* Posiciona com base na `.container` */
+    top: 75%;           /* Altere esta proporção para ajustar o ponto vertical */
+    left: 330px;          /* Altere esta proporção para ajustar o ponto horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o ponto ao ajustar */
+}
+
+.loc2 {
     width: 90px;
     height: 50px;
+    background-color: rgba(0, 0, 255, 0.5); /* Apenas para visualização */
+    border-radius: 5px; /* Suaviza as bordas */
+}
+
+@media (max-aspect-ratio: 16/9) {
+    video {
+        height: 100vh;
+        width: auto;
+    }
 }
