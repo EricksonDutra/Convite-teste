@@ -5,4 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Autoplay bloqueado, tentando iniciar manualmente.');
         });
     }
+
+    video.addEventListener('canplay', () => {
+        video.muted = false;
+    })
 });
