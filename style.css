@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+   }
+
+.loc{
+    position: fixed;
+    top: 620px;
+    left: 280px;
+}
+
+.container{
+    width: 65vh;
+}
+
+.loc2{
+    /* background-color: aqua; */
+    width: 90px;
+    height: 50px;
+}
